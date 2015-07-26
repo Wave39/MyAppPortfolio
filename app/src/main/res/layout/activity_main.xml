@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:text="@string/my_nanodegree_apps" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_gravity="center"
+        android:textSize="24sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp" />
+
+    <Button style="@style/MainScreenButton"
+        android:text="@string/spotify_streamer"
+        android:id="@+id/spotify_streamer_button"
+        android:onClick="appButtonClick" />
+
+    <Button style="@style/MainScreenButton"
+        android:text="@string/football_scores_app"
+        android:id="@+id/football_scores_app"
+        android:onClick="appButtonClick" />
+
+    <Button style="@style/MainScreenButton"
+        android:text="@string/library_app"
+        android:id="@+id/library_app_button"
+        android:onClick="appButtonClick" />
+
+    <Button style="@style/MainScreenButton"
+        android:text="@string/build_it_bigger"
+        android:id="@+id/build_it_bigger_button"
+        android:onClick="appButtonClick" />
+
+    <Button style="@style/MainScreenButton"
+        android:text="@string/xyz_reader"
+        android:id="@+id/xyz_reader_button"
+        android:onClick="appButtonClick" />
+
+    <Button style="@style/MainScreenButton"
+        android:background="@color/CapstoneRed"
+        android:text="@string/capstone"
+        android:textColor="@color/White"
+        android:id="@+id/capstone_button"
+        android:onClick="appButtonClick" />
+
+</LinearLayout>
