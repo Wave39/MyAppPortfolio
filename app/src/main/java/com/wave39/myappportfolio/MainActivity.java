@@ -1,12 +1,12 @@
 package com.wave39.myappportfolio;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
-
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +16,16 @@ public class MainActivity extends ActionBarActivity {
 
     public void appButtonClick(View view) {
         int viewId = view.getId();
-        String textString = "This button will launch the ";
-        if (viewId == R.id.spotify_streamer_button) {
-            textString += "Spotify streamer";
+
+        // launch an intent for the selected button view ID
+        if (viewId == R.id.popular_movies_button) {
+            Intent i = getPackageManager().getLaunchIntentForPackage("com.wave39.popularmoviesstage2");
+            startActivity(i);
+            return;
         }
-        else if (viewId == R.id.football_scores_app) {
+
+        String textString = "This button will launch the ";
+        if (viewId == R.id.football_scores_app) {
             textString += "football scores";
         }
         else if (viewId == R.id.library_app_button) {
