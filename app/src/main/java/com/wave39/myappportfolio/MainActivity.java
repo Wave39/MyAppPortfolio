@@ -28,12 +28,14 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             return;
         }
+        else if (viewId == R.id.football_scores_app) {
+            Intent i = getPackageManager().getLaunchIntentForPackage("barqsoft.footballscores");
+            startActivity(i);
+            return;
+        }
 
         String textString = "This button will launch the ";
-        if (viewId == R.id.football_scores_app) {
-            textString += "football scores";
-        }
-        else if (viewId == R.id.build_it_bigger_button) {
+        if (viewId == R.id.build_it_bigger_button) {
             textString += "build it bigger";
         }
         else if (viewId == R.id.xyz_reader_button) {
