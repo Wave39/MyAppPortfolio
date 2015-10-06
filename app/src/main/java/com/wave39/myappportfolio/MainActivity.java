@@ -23,13 +23,15 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
             return;
         }
+        else if (viewId == R.id.library_app_button) {
+            Intent i = getPackageManager().getLaunchIntentForPackage("it.jaschke.alexandria");
+            startActivity(i);
+            return;
+        }
 
         String textString = "This button will launch the ";
         if (viewId == R.id.football_scores_app) {
             textString += "football scores";
-        }
-        else if (viewId == R.id.library_app_button) {
-            textString += "library";
         }
         else if (viewId == R.id.build_it_bigger_button) {
             textString += "build it bigger";
